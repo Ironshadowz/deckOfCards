@@ -1,0 +1,16 @@
+<h2>Game {{deckID}}</h2>
+<div>
+  <h3>How many cards to draw</h3>
+  <select #selected (change)="drawNum()">
+    <option *ngFor="let i of draws" [value]="i">{{i}}</option>
+  </select>
+</div>
+<div>
+  <h2>{{cardsRemaining}}</h2>
+</div>
+<div>
+  <button type="button" (click)="drawCard()">Draw</button>
+</div>
+<div>
+ <span *ngFor="let i of cards"><img [src]="i"> &nbsp; </span>
+</div>
